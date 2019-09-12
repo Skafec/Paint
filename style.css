@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -45,3 +46,52 @@ canvas {
   width: 80%;
   margin-bottom: 20px;
 }
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  margin: 15px 20px;
+  text-align: center;
+}
+
+#wrapper h2 {
+  margin-bottom: 10px;
+}
+
+#wrapper button {
+  margin-bottom: 20px;
+}
+
+#colors {
+  width: 60%;
+  margin: auto;
+}
+
+#colors #background-colors {
+  float: left;
+}
+
+#colors #pen-colors {
+  float: right;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+canvas {
+  margin: auto;
+  display: block;
+}
+
+#canvas {
+  border: 2px solid black;
+  height: 80vh;
+  width: 80%;
+  margin-bottom: 20px;
+}
+>>>>>>> 1a8c1c025104d115ca04ac74e5c473b7653ac7c8
