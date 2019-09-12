@@ -9,6 +9,27 @@
   text-align: center;
 }
 
+#wrapper h2 {
+  margin-bottom: 10px;
+}
+
+#wrapper button {
+  margin-bottom: 20px;
+}
+
+#colors {
+  width: 60%;
+  margin: auto;
+}
+
+#colors #background-colors {
+  float: left;
+}
+
+#colors #pen-colors {
+  float: right;
+}
+
 h1 {
   margin-bottom: 20px;
 }

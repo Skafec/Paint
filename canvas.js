@@ -23,10 +23,10 @@ function drawing() {
       ctx.lineWidth = 10;
       ctx.lineCap = "round";
 
-      ctx.lineTo(e.clientX, e.clientY);
+      ctx.lineTo(translatedX(e.clientX), translatedY(e.clientY));
       ctx.stroke();
       ctx.beginPath();
-      ctx.moveTo(e.clientX, e.clientY);
+      ctx.moveTo(translatedX(e.clientX), translatedY(e.clientY));
     }
 
     //EventListeners
@@ -41,6 +41,18 @@ function drawing() {
     //Resizing
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+  }
+
+  function translatedX(x) {
+    var rect = canvas.getBoundingClientRect();
+    var factor = canvas.width / rect.width;
+    return factor * (x - rect.left);
+  }
+
+  function translatedY(y) {
+    var rect = canvas.getBoundingClientRect();
+    var factor = canvas.width / rect.width;
+    return factor * (y - rect.top);
   }
 }
 
