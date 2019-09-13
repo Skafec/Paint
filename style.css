@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
 #wrapper h2 {
   margin-bottom: 10px;
 }
@@ -18,20 +22,24 @@
 }
 
 #colors {
-  width: 60%;
+  width: 80%;
   margin: auto;
 }
 
 #colors #background-colors {
   float: left;
+  width: 33%;
 }
 
 #colors #pen-colors {
   float: right;
+  width: 33%;
 }
 
-h1 {
-  margin-bottom: 20px;
+#colors #clear {
+  float: left;
+  margin: auto;
+  width: 33%;
 }
 
 canvas {

@@ -62,7 +62,6 @@ function download() {
     .toDataURL("image/png")
     .replace("image/png", "image/octet-stream");
   download.setAttribute("href", image);
-  clear();
 }
 
 function backgroundChange(id) {
@@ -82,6 +81,11 @@ function backgroundChange(id) {
     case "blue":
       ctx.fillStyle = "#0000FF";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      break;
+    case "white":
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = "#000000";
       break;
   }
 }
@@ -103,8 +107,11 @@ function penChange(id) {
   }
 }
 
-function clear() {
-  ctx.fillStyle = "#FFFFFF";
+/* function clear(id) {
+  if (id == "white") {
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
   ctx.lineWidth = 10;
   ctx.lineCap = "round";
-}
+} */
