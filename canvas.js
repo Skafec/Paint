@@ -86,6 +86,23 @@ function backgroundChange(id) {
   }
 }
 
+function penChange(id) {
+  switch (id) {
+    case "red":
+      ctx.strokeStyle = "#FF0000";
+      break;
+    case "green":
+      ctx.strokeStyle = "#008000";
+      break;
+    case "black":
+      ctx.strokeStyle = "#000000";
+      break;
+    case "blue":
+      ctx.strokeStyle = "#0000FF";
+      break;
+  }
+}
+
 function clear() {
   ctx.fillStyle = "#FFFFFF";
   ctx.lineWidth = 10;
