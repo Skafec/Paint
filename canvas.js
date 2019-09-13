@@ -1,10 +1,9 @@
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
 drawing();
 
 function drawing() {
   window.addEventListener("load", () => {
-    const canvas = document.querySelector("#canvas");
-    const ctx = canvas.getContext("2d");
-
     resize();
 
     //variables
@@ -63,4 +62,32 @@ function download() {
     .toDataURL("image/png")
     .replace("image/png", "image/octet-stream");
   download.setAttribute("href", image);
+  clear();
+}
+
+function backgroundChange(id) {
+  switch (id) {
+    case "red":
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      break;
+    case "green":
+      ctx.fillStyle = "#008000";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      break;
+    case "black":
+      ctx.fillStyle = "#000000";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      break;
+    case "blue":
+      ctx.fillStyle = "#0000FF";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      break;
+  }
+}
+
+function clear() {
+  ctx.fillStyle = "#FFFFFF";
+  ctx.lineWidth = 10;
+  ctx.lineCap = "round";
 }
