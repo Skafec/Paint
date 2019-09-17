@@ -5,6 +5,7 @@ drawing();
 function drawing() {
   window.addEventListener("load", () => {
     resize();
+    canvasFill();
 
     //variables
     let painting = false;
@@ -40,6 +41,7 @@ function drawing() {
     //Resizing
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+    canvasFill();
   }
 
   function translatedX(x) {
@@ -52,6 +54,11 @@ function drawing() {
     var rect = canvas.getBoundingClientRect();
     var factor = canvas.width / rect.width;
     return factor * (y - rect.top);
+  }
+
+  function canvasFill() {
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 }
 
