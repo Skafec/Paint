@@ -107,6 +107,17 @@ function penChange(id) {
   }
 }
 
+function customBg() {
+  let bgCustom = document.getElementById("background-custom");
+  ctx.fillStyle = bgCustom.value;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+function customPen() {
+  let penCustom = document.getElementById("pen-custom");
+  ctx.strokeStyle = penCustom.value;
+}
+
 /* function clear(id) {
   if (id == "white") {
     ctx.fillStyle = "#FFFFFF";
