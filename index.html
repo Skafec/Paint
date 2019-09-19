@@ -12,35 +12,52 @@
       <h1>Drawing station</h1>
       <div id="colors">
         <div id="background-colors">
-          <h2>Background color</h2>
+          <img src="./img/icons/background.svg" alt="Background colors icon" />
+          <!-- <h2>Background color</h2>
           <button id="red" onclick="backgroundChange(this.id)">red</button>
           <button id="green" onclick="backgroundChange(this.id)">green</button>
           <button id="black" onclick="backgroundChange(this.id)">black</button>
           <button id="blue" onclick="backgroundChange(this.id)">blue</button>
           Choose your favorite color:
-          <input type="color" id="background-custom" onchange="customBg()" />
+          <input type="color" id="background-custom" onchange="customBg()" /> -->
         </div>
 
         <div id="clear">
-          <button id="white" onclick="backgroundChange(this.id)">Clear</button>
+          <img
+            src="./img/icons/new.svg"
+            alt="Clear canvas icon"
+            id="white"
+            onclick="backgroundChange(this.id)"
+          />
+        </div>
+
+        <div>
+            <a id="download" download="image.png">
+                <img
+                src="./img/icons/download.svg"
+                alt="Download canvas content icon"
+                onClick="download()"
+              />
+              </a>
+              
+            <!-- <button type="button" onClick="download()">Download</button> -->
+            
+          </a>
         </div>
 
         <div id="pen-colors">
-          <h2>Pen color</h2>
+          <img src="./img/icons/pen.svg" alt="Pen colors icon" />
+          <!-- <h2>Pen color</h2>
           <button id="red" onclick="penChange(this.id)">red</button>
           <button id="blue" onclick="penChange(this.id)">blue</button>
           <button id="green" onclick="penChange(this.id)">green</button>
           <button id="black" onclick="penChange(this.id)">black</button>
           Choose your favorite color:
-          <input type="color" id="pen-custom" onchange="customPen()" />
+          <input type="color" id="pen-custom" onchange="customPen()" /> -->
         </div>
       </div>
 
       <canvas id="canvas"></canvas>
-
-      <a id="download" download="image.png">
-        <button type="button" onClick="download()">Download</button>
-      </a>
     </div>
 
     <!-- Credits:

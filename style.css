@@ -24,31 +24,41 @@ h1 {
   margin-bottom: 10px;
 }
 
-#wrapper button {
-  margin-bottom: 20px;
-}
-
 #colors {
   width: 80%;
   margin: auto;
 }
 
-#colors #background-colors {
+#colors #background-colors,
+#colors #pen-colors,
+#colors #clear,
+#colors #download {
   float: left;
-  width: 33%;
+  width: 25%;
+}
+
+/* #colors #background-colors {
+  float: left;
+  width: 25%;
 }
 
 #colors #pen-colors {
   float: right;
-  width: 33%;
+  width: 25%;
 }
 
 #colors #clear {
   float: left;
   margin: auto;
-  width: 33%;
+  width: 25%;
 }
 
+#colors #download {
+  float: left;
+  margin: auto;
+  width: 25%;
+}
+ */
 canvas {
   margin: auto;
   display: block;
