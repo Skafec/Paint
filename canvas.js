@@ -76,22 +76,22 @@ function backgroundChange(id) {
     case "red":
       ctx.fillStyle = "#FF0000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      dropdown();
+      dropdown_bg();
       break;
     case "green":
       ctx.fillStyle = "#008000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      dropdown();
+      dropdown_bg();
       break;
     case "black":
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      dropdown();
+      dropdown_bg();
       break;
     case "blue":
       ctx.fillStyle = "#0000FF";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      dropdown();
+      dropdown_bg();
       break;
     case "white":
       ctx.fillStyle = "#FFFFFF";
@@ -105,15 +105,19 @@ function penChange(id) {
   switch (id) {
     case "red":
       ctx.strokeStyle = "#FF0000";
+      dropdown_pen();
       break;
     case "green":
       ctx.strokeStyle = "#008000";
+      dropdown_pen();
       break;
     case "black":
       ctx.strokeStyle = "#000000";
+      dropdown_pen();
       break;
     case "blue":
       ctx.strokeStyle = "#0000FF";
+      dropdown_pen();
       break;
   }
 }
