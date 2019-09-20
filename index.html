@@ -12,14 +12,18 @@
       <h1>Drawing station</h1>
       <div id="colors">
         <div id="background-colors">
-          <img src="./img/icons/background.svg" alt="Background colors icon" />
-          <!-- <h2>Background color</h2>
-          <button id="red" onclick="backgroundChange(this.id)">red</button>
-          <button id="green" onclick="backgroundChange(this.id)">green</button>
-          <button id="black" onclick="backgroundChange(this.id)">black</button>
-          <button id="blue" onclick="backgroundChange(this.id)">blue</button>
-          Choose your favorite color:
-          <input type="color" id="background-custom" onchange="customBg()" /> -->
+          <img src="./img/icons/background.svg" alt="Background colors icon" title="Change Background Color" onclick="dropdown_bg()"/>
+          <div id="dropdown-background">
+            <h2>Background colors</h2>
+            <button id="red" onclick="backgroundChange(this.id)">red</button>
+            <button id="green" onclick="backgroundChange(this.id)">green</button>
+            <button id="black" onclick="backgroundChange(this.id)">black</button>
+            <button id="blue" onclick="backgroundChange(this.id)">blue</button>
+            <br>
+            <h2>Custom color:</h2>
+            <input type="color" id="background-custom" onchange="customBg()" /> 
+          </div>
+          <!-- -->
         </div>
 
         <div id="clear">
@@ -27,7 +31,8 @@
             src="./img/icons/new.svg"
             alt="Clear canvas icon"
             id="white"
-            onclick="backgroundChange(this.id)"
+            onclick="clear_alert()"
+            title="Clear Canvas"
           />
         </div>
 
@@ -37,6 +42,7 @@
                 src="./img/icons/download.svg"
                 alt="Download canvas content icon"
                 onClick="download()"
+                title="Download Your Art"
               />
               </a>
               
@@ -46,14 +52,17 @@
         </div>
 
         <div id="pen-colors">
-          <img src="./img/icons/pen.svg" alt="Pen colors icon" />
-          <!-- <h2>Pen color</h2>
-          <button id="red" onclick="penChange(this.id)">red</button>
-          <button id="blue" onclick="penChange(this.id)">blue</button>
-          <button id="green" onclick="penChange(this.id)">green</button>
-          <button id="black" onclick="penChange(this.id)">black</button>
-          Choose your favorite color:
-          <input type="color" id="pen-custom" onchange="customPen()" /> -->
+          <img src="./img/icons/pen.svg" alt="Pen colors icon" title="Change Pen Color" onclick="dropdown_pen()"/>
+          <div id="dropdown-pen">
+            <h2>Pen color</h2>
+            <button id="red" onclick="penChange(this.id)">red</button>
+            <button id="blue" onclick="penChange(this.id)">blue</button>
+            <button id="green" onclick="penChange(this.id)">green</button>
+            <button id="black" onclick="penChange(this.id)">black</button>
+            <br>
+            <h2>Custom color:</h2>
+            <input type="color" id="pen-custom" onchange="customPen()" />
+          </div>
         </div>
       </div>
 

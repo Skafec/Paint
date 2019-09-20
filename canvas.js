@@ -76,18 +76,22 @@ function backgroundChange(id) {
     case "red":
       ctx.fillStyle = "#FF0000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      dropdown();
       break;
     case "green":
       ctx.fillStyle = "#008000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      dropdown();
       break;
     case "black":
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      dropdown();
       break;
     case "blue":
       ctx.fillStyle = "#0000FF";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      dropdown();
       break;
     case "white":
       ctx.fillStyle = "#FFFFFF";
@@ -118,11 +122,30 @@ function customBg() {
   let bgCustom = document.getElementById("background-custom");
   ctx.fillStyle = bgCustom.value;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+  dropdown();
 }
 
 function customPen() {
   let penCustom = document.getElementById("pen-custom");
   ctx.strokeStyle = penCustom.value;
+}
+
+function dropdown_bg() {
+  let element = document.getElementById("dropdown-background");
+  element.classList.toggle("show");
+}
+
+function dropdown_pen() {
+  let element = document.getElementById("dropdown-pen");
+  element.classList.toggle("show");
+}
+
+function clear_alert() {
+  if (confirm("Are you sure you want to delete your work?")) {
+    backgroundChange("white");
+  } else {
+    alert("Phew! That was close!");
+  }
 }
 
 /* function clear(id) {
