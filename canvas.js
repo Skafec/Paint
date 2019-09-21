@@ -69,6 +69,8 @@ function download() {
     .toDataURL("image/png")
     .replace("image/png", "image/octet-stream");
   download.setAttribute("href", image);
+  bgDropdownCheck();
+  penDropdownCheck();
 }
 
 function backgroundChange(id) {
@@ -76,6 +78,9 @@ function backgroundChange(id) {
     case "red":
       ctx.fillStyle = "#FF0000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      /* Background color of buttons, fires on click(problem)
+      let element = document.getElementById(id);
+      element.style.backgroundColor = "#FF0000"; */
       dropdown_bg();
       break;
     case "green":
@@ -126,22 +131,38 @@ function customBg() {
   let bgCustom = document.getElementById("background-custom");
   ctx.fillStyle = bgCustom.value;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  dropdown();
+  dropdown_bg();
 }
 
 function customPen() {
   let penCustom = document.getElementById("pen-custom");
   ctx.strokeStyle = penCustom.value;
+  dropdown_pen();
 }
 
+let bgDropdown = document.getElementById("dropdown-background");
+let penDropdown = document.getElementById("dropdown-pen");
+
 function dropdown_bg() {
-  let element = document.getElementById("dropdown-background");
-  element.classList.toggle("show");
+  bgDropdown.classList.toggle("show");
+  penDropdownCheck();
 }
 
 function dropdown_pen() {
-  let element = document.getElementById("dropdown-pen");
-  element.classList.toggle("show");
+  penDropdown.classList.toggle("show");
+  bgDropdownCheck();
+}
+
+function penDropdownCheck() {
+  if (penDropdown.classList.contains("show")) {
+    penDropdown.classList.toggle("show");
+  }
+}
+
+function bgDropdownCheck() {
+  if (bgDropdown.classList.contains("show")) {
+    bgDropdown.classList.toggle("show");
+  }
 }
 
 function clear_alert() {
@@ -150,13 +171,6 @@ function clear_alert() {
   } else {
     alert("Phew! That was close!");
   }
+  bgDropdownCheck();
+  penDropdownCheck();
 }
-
-/* function clear(id) {
-  if (id == "white") {
-    ctx.fillStyle = "#FFFFFF";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-  }
-  ctx.lineWidth = 10;
-  ctx.lineCap = "round";
-} */

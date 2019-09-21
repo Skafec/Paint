@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
     <title>Canvas tut</title>
   </head>
   <body>
@@ -14,14 +15,17 @@
         <div id="background-colors">
           <img src="./img/icons/background.svg" alt="Background colors icon" title="Change Background Color" onclick="dropdown_bg()"/>
           <div id="dropdown-background">
-            <h2>Background colors</h2>
-            <button id="red" onclick="backgroundChange(this.id)">red</button>
-            <button id="green" onclick="backgroundChange(this.id)">green</button>
-            <button id="black" onclick="backgroundChange(this.id)">black</button>
-            <button id="blue" onclick="backgroundChange(this.id)">blue</button>
-            <br>
-            <h2>Custom color:</h2>
-            <input type="color" id="background-custom" onchange="customBg()" /> 
+            <div id="background-container">
+                <h2>Background</h2>
+                <button id="red"  onclick="backgroundChange(this.id)"></button><br>
+                <button id="green" onclick="backgroundChange(this.id)"></button><br>
+                <button id="black" onclick="backgroundChange(this.id)"></button><br>
+                <button id="blue" onclick="backgroundChange(this.id)"></button><br>
+                <br>
+                <h2>Custom</h2>
+                <input type="color" id="background-custom" onchange="customBg()" />
+            </div>
+             
           </div>
           <!-- -->
         </div>
@@ -54,14 +58,18 @@
         <div id="pen-colors">
           <img src="./img/icons/pen.svg" alt="Pen colors icon" title="Change Pen Color" onclick="dropdown_pen()"/>
           <div id="dropdown-pen">
-            <h2>Pen color</h2>
-            <button id="red" onclick="penChange(this.id)">red</button>
-            <button id="blue" onclick="penChange(this.id)">blue</button>
-            <button id="green" onclick="penChange(this.id)">green</button>
-            <button id="black" onclick="penChange(this.id)">black</button>
-            <br>
-            <h2>Custom color:</h2>
-            <input type="color" id="pen-custom" onchange="customPen()" />
+            <div id="pen-container">
+                <h2>Pen</h2>
+                <button id="red" onclick="penChange(this.id)"></button><br>
+                <button id="blue" onclick="penChange(this.id)"></button><br>
+                <button id="green" onclick="penChange(this.id)"></button><br>
+                <button id="black" onclick="penChange(this.id)"></button><br>
+                <br>
+                <h2>Custom</h2>
+                <input type="color" id="pen-custom" onchange="customPen()" />
+            </div>
+            
+            
           </div>
         </div>
       </div>
